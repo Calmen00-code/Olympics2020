@@ -1,0 +1,20 @@
+INSERT INTO Country VALUES('USA', 10, 0, 0, 0);
+INSERT INTO Country VALUES('China', 5, 0, 0, 0);
+INSERT INTO Country VALUES('Malaysia', 5, 0, 0, 0);
+INSERT INTO Country VALUES('Australia', 5, 0, 0, 0);
+INSERT INTO Country VALUES('Indonesia', 3, 0, 0, 0);
+INSERT INTO Country VALUES('Korea', 2, 0, 0, 0);
+INSERT INTO Country VALUES('Japan', 1, 0, 0, 0);
+INSERT INTO Country VALUES('Thailand', 4, 0, 0, 0);
+INSERT INTO Country VALUES('Turky', 1, 0, 0, 0);
+
+-- DESC Country;
+-- SELECT countryName FROM Country;
+-- DELETE FROM Country WHERE countryName = 'China';
+-- DELETE FROM Country WHERE countryName = 'Malaysia';
+-- DELETE FROM Country WHERE countryName = 'Australia';
+-- DELETE FROM Country WHERE countryName = 'Indonesia';
+-- DELETE FROM Country WHERE countryName = 'Korea';
+-- DELETE FROM Country WHERE countryName = 'Thailand';
+-- DELETE FROM Country WHERE countryName = 'Japan';
+-- DELETE FROM Country WHERE countryName = 'Turky';

@@ -1,0 +1,35 @@
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('A01', 'Archery', '2021-08-01 08:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('A02', 'Artistic Gymnastics', '2021-08-01 09:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('A03', 'Artistic Swimming', '2021-08-01 15:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('A04', 'Atheletics', '2021-08-01 17:30:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('B01', 'Badminton', '2021-08-01 18:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('B02', 'Baseball', '2021-08-02 13:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('B03', 'Basketball', '2021-08-02 14:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('B04', 'Beach Volleyball', '2021-08-02 21:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('B05', 'Boxing', '2021-08-02 21:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('C01', 'Canoe Salom', '2021-08-02 09:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('C02', 'Canoe Sprint', '2021-08-02 10:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('C03', 'Cycling Road', '2021-08-02 12:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('D01', 'Diving', '2021-08-01 08:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('E01', 'Equestrian', '2021-08-01 13:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('F01', 'Fencing', '2021-08-03 13:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('F02', 'Football', '2021-08-03 14:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('G01', 'Golf', '2021-08-04 18:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('K01', 'Karate', '2021-08-07 15:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('S01', 'Shooting', '2021-08-10 16:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('S02', 'Skateboarding', '2021-08-10 13:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('S03', 'Sport Climbing', '2021-08-10 09:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('S04', 'Surfing', '2021-08-10 16:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('S05', 'Swimming', '2021-08-10 18:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('S06', 'Sailing', '2021-11-30 09:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('T01', 'Taekwondo', '2021-08-10 13:30:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('T02', 'Tennis', '2021-08-10 09:30:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('T03', 'Triathlon', '2021-08-10 16:45:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('V01', 'Volleyball', '2021-08-11 13:00:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('W01', 'Weightlifting', '2021-08-12 09:15:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('W02', 'Wrestling', '2021-08-12 16:20:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('R01', 'Rowing', '2021-12-12 14:20:00');
+INSERT INTO Game (gameID, gamedesc, date_time) VALUES('R02', 'Rugby Sevens', '2021-12-10 13:20:00');
+
+
+DESC Game;
