@@ -14,13 +14,6 @@ CREATE TABLE Game(
     date_time DATETIME
 );
 
-DROP TABLE Game;
-DROP TABLE Matches;
-DROP TABLE Venue;
-DROP TABLE Winner;
-DROP TABLE Loser;
-DROP TABLE Participant;
-
 -- Participant table
 CREATE TABLE Participant(
 	ID CHAR(6) PRIMARY KEY,
