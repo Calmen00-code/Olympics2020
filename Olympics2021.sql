@@ -84,4 +84,31 @@ SELECT venueCode, date_time FROM Venue v INNER JOIN Game g
 ON v.gameID = g.gameID
 WHERE g.gamedesc = 'Taekwondo';
 
--- Question 11
+-- Trigger to add noParticipants in Country when new Participant is inserted 
+DELIMITER //
+CREATE TRIGGER after_insert_participant
+	AFTER INSERT ON Participant
+    FOR EACH ROW
+	BEGIN
+		DECLARE err_msg_country_check VARCHAR(100);
+		SET err_msg_country_check = 'Name of the country cannot be NULL';
+		IF NEW.countryName IS NULL THEN
+			SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = err_msg_country_check;
+		ELSE
+			UPDATE Country 
+            SET noParticipants = noParticipants + 1
+            WHERE countryName = NEW.countryName;
+		END IF;
+	END //
+DELIMITER ;
+
+SELECT noParticipants FROM Country
+WHERE countryName = 'Malaysia';
+
+INSERT INTO Participant VALUES('000036', 'D01', 'Pandelela', 'Rinong', 'Malaysia', 28, 'F');
+
+SELECT noParticipants FROM Country
+WHERE countryName = 'Malaysia';
+
+-- Trigger to add number of medals in Country when new Winner is inserted.

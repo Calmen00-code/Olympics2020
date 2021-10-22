@@ -41,5 +41,3 @@ INSERT INTO Participant VALUES('000031', 'T01', 'Panipak', 'Wongpattanakit', 'Th
 INSERT INTO Participant VALUES('000032', 'B01', 'Sapsiree', 'Taerattanachai', 'Thailand', 29, 'M');
 INSERT INTO Participant VALUES('000033', 'B01', 'Busanan', 'Ongbamrungphan', 'Thailand', 25, 'F');
 INSERT INTO Participant VALUES('000034', 'B01', 'Naphaswan', 'Yangpaiboon', 'Thailand', 33, 'F');
-
-INSERT INTO Participant VALUES('000035', 'A01', 'Mete', 'Gazoz', 'Turky', 22, 'M');
