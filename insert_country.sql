@@ -7,6 +7,8 @@ INSERT INTO Country VALUES('Korea', 2, 0, 0, 0);
 INSERT INTO Country VALUES('Japan', 1, 0, 0, 0);
 INSERT INTO Country VALUES('Thailand', 4, 0, 0, 0);
 INSERT INTO Country VALUES('Turky', 1, 0, 0, 0);
+INSERT INTO Country VALUES('Canada', 1, 0, 0, 0);
+INSERT INTO Country VALUES('Belgium', 1, 0, 0, 0);
 
 -- DESC Country;
 -- SELECT countryName FROM Country;

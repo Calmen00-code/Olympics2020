@@ -84,6 +84,35 @@ SELECT venueCode, date_time FROM Venue v INNER JOIN Game g
 ON v.gameID = g.gameID
 WHERE g.gamedesc = 'Taekwondo';
 
+-- Question 11
+SELECT countryName, COUNT(gold) FROM Winner w INNER JOIN Participant p
+WHERE gold = p.ID
+GROUP BY countryName;
+
+-- Procedure to automatically add the largest/latest ID to the Participant
+DESC Participant;
+DELIMITER //
+CREATE PROCEDURE insert_participant(
+	inGameID CHAR(6),
+	inFirstName VARCHAR(36),
+    inLastName VARCHAR(36),
+    inCountryName VARCHAR(26),
+    inAge INT,
+    inGender CHAR(1)
+)
+COMMENT 'Add new participant with the largest ID'
+	BEGIN
+		DECLARE nextID CHAR(6);
+        SELECT MAX(ID) + 1 FROM Participant INTO nextID;
+		INSERT INTO Participant VALUES(nextID, inGameID, inFirstName, inLastName, inCountryName, inAge, inGender);
+    END //
+DELIMITER ;
+
+SELECT * FROM Game;
+SELECT * FROM Participant;
+CALL insert_participant('B01', 'Viktor', 'Axelsen', 'Denmark', 27, 'M');
+SELECT * FROM Participant;
+
 -- Trigger to add noParticipants in Country when new Participant is inserted 
 DELIMITER //
 CREATE TRIGGER after_insert_participant
@@ -111,4 +140,27 @@ INSERT INTO Participant VALUES('000036', 'D01', 'Pandelela', 'Rinong', 'Malaysia
 SELECT noParticipants FROM Country
 WHERE countryName = 'Malaysia';
 
--- Trigger to add number of medals in Country when new Winner is inserted.
+-- Trigger to add number of medals in Country when new Winner is inserted
+DELIMITER //
+CREATE TRIGGER after_insert_winner
+	AFTER INSERT ON Winner
+    FOR EACH ROW
+    BEGIN
+		UPDATE Country
+        SET noGold = noGold + 1 
+        WHERE countryName = (SELECT countryName FROM Winner w INNER JOIN Participant p
+								WHERE w.countryName = p.countryName);
+		UPDATE Country
+        SET noSilver = noSilver + 1 
+        WHERE countryName = (SELECT countryName FROM Winner w INNER JOIN Participant p
+								WHERE w.countryName = p.countryName);
+		UPDATE Country
+        SET noBronze = noBronze + 1 
+        WHERE countryName = (SELECT countryName FROM Winner w INNER JOIN Participant p
+								WHERE w.countryName = p.countryName);
+	END //
+DELIMITER ;
+
+DESC Winner;
+DESC Game;
+
